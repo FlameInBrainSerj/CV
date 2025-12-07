@@ -1,4 +1,4 @@
-CV_NAME=Krivosheev_Sergey_DE_CV
+CV_NAME=Krivosheev_Sergey_Data_Engineer_CV
 
 .PHONY: compile
 compile:
