@@ -96,36 +96,55 @@
 
     \resumeSubheading
       {Data Engineer}{Jul 2024 -- Present}
-      {Nexign - Leading Russian OSS/BSS software vendor for Billing and Telecom}{}
+      {Nexign — Leading Russian OSS/BSS software vendor for Billing and Telecom}{}
       \resumeItemListStart
-      \resumeItem{ Maintained and developed \textbf{ETL} pipelines in \textbf{Apache Airflow}, including tasks involving interactions with multiple services such as external \textbf{APIs}, \textbf{HDFS}, \textbf{Spark}, \textbf{SFTP}, \textbf{S3}, etc. Developed plugins for external API integration. Improved validation tasks performance by 3 times }
-      \resumeItem{ Migrated \textbf{Spark} jobs written in \textbf{Java} using \textbf{Spark RDD} to \textbf{Scala}-based jobs using the \textbf{Spark DataFrame API}. Refactored legacy jobs, reducing resource consumption by 30\% and execution time by 80\% on average. Engineered new functionality using \textbf{Spark UDFs} }
-      \resumeItem{ Researched and modified \textbf{Spark} source code to extend its functionality, including integrating \textbf{Spark Streaming} with \textbf{SFTP} and modifying the \textbf{Spark JDBC} connector to insert nullable strings into enum columns in \textbf{PostgreSQL} }
-      \resumeItem{ Optimized \textbf{ClickHouse} queries in \textbf{ETL} jobs, reducing execution time by 30\%, and refactored the storage schema of several tables, decreasing read time by an average of 40\% }
-      \resumeItem{ Researched and integrated \textbf{Flink} for implementing \textbf{stateful streaming jobs}. Developed jobs in Java using the \textbf{DataStream API} with custom sink operators supporting \textbf{exactly-once} semantics. Configured deployment for a self-managed job cluster using \textbf{Ansible} }
-      \resumeItem{ Deployed and administered an \textbf{Arenadata Dist Hadoop} cluster in a staging environment with \textbf{Hive} and \textbf{Spark}. Configured \textbf{HDFS} and \textbf{Spark} clients on client machines. Migrated \textbf{HDFS} data and the \textbf{Hive Metastore} from the old cluster to the new one, resolving all incompatibilities }
-      \resumeItem{ Successfully completed major versions migrations: \textbf{Python $3.6 \to 3.12$}, \textbf{Airflow $2 \to 3$}, \textbf{Spark $2 \to 3$}, \textbf{Java $8 \to 21$}, \textbf{Spring Boot $2 \to 3$}, \textbf{Hadoop $2 \to 3$} }
-      \resumeItem{ Developed several \textbf{Kotlin} services as MVPs. Increased \textbf{RPS} can be processed by implementing \textbf{multi-instance, thread-safe concurrency} with \textbf{at-least-once} semantics, enabling horizontal scaling by X times and vertical scaling by 25\%. Enhanced transparency by improving service observability, including detailed logs, tracing, and comprehensive monitoring }
-      \resumeItem{ Maintained \textbf{Java/Kotlin} backend services by fixing bugs in existing functionality and developing new features. Refactored legacy projects with \textbf{improving developer experience}, \textbf{reducing time-to-market} for new features by 25\% }
+
+      \resumeItem{
+        Maintained and developed \textbf{ETL pipelines} in \textbf{Apache Airflow}, integrating external \textbf{APIs}, \textbf{HDFS}, \textbf{Spark}, \textbf{SFTP}, and \textbf{S3}.
+        Improved validation task performance by \textbf{3×}, reducing DAG execution windows and lowering compute costs for scheduled workloads
+      }
+
+      \resumeItem{
+        Migrated legacy \textbf{Spark} jobs from \textbf{Java RDD}-based implementations to \textbf{Scala} using the \textbf{Spark DataFrame API}.
+        Reduced cluster resource consumption by \textbf{30\%} and execution time by \textbf{80\%}, increasing cluster throughput and avoiding additional infrastructure scaling.
+        Engineered new functionality using \textbf{Spark UDFs}
+      }
+
+      \resumeItem{
+        Researched and modified \textbf{Spark} source code to extend platform capabilities, including integrating \textbf{Spark Streaming} with \textbf{SFTP}
+        and enhancing the \textbf{Spark JDBC} connector for nullable enum inserts into \textbf{PostgreSQL}
+      }
+
+      \resumeItem{
+        Optimized \textbf{ClickHouse} queries and refactored table storage schemas in ETL jobs, reducing execution time by \textbf{30–40\%} and decreasing analytical workload pressure on production systems
+      }
+
+      \resumeItem{
+        Researched and integrated \textbf{Flink} for implementing \textbf{stateful streaming jobs}. Developed jobs in Java using the \textbf{DataStream API} with custom sink operators supporting \textbf{exactly-once} semantics.
+        Configured deployment for a self-managed job cluster using \textbf{Ansible}
+      }
+
+      \resumeItem{
+        Deployed and administered an \textbf{Arenadata Dist Hadoop} cluster with \textbf{Hive} and \textbf{Spark} in a staging environment.
+        Migrated \textbf{HDFS} data and the \textbf{Hive Metastore} from a legacy cluster, preventing downtime and mitigating risks during platform upgrades
+      }
+
+      \resumeItem{
+        Successfully completed major versions migrations: \textbf{Python 3.6 → 3.12}, \textbf{Airflow 2 → 3}, \textbf{Spark 2 → 3}, \textbf{Java 8 → 21}, \textbf{Spring Boot 2 → 3}, \textbf{Hadoop 2 → 3},
+        reducing technical debt and long-term support costs
+      }
+
+      \resumeItem{
+        Developed several \textbf{Kotlin} services as MVPs. Increased \textbf{RPS} can be processed by implementing \textbf{multi-instance, thread-safe concurrency} with \textbf{at-least-once} semantics, enabling horizontal scaling by X times and vertical scaling by 25\%.
+        Enhanced transparency by improving service observability, including detailed logs, tracing, and comprehensive monitoring
+      }
+
+      \resumeItem{
+        Maintained and extended \textbf{Java/Kotlin} backend services by fixing production issues and implementing new features.
+        Refactored legacy codebases to improve developer experience, reducing time-to-market for new features by \textbf{25\%} and lowering ongoing maintenance effort
+      }
+
       \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-% ===== EDUCATION =====
-\section{Education}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-    {Higher School of Economics (HSE University), Faculty of Computer Science}{Sep 2023 -- Jun 2025}
-      {Master's degree in Machine Learning and High Load Systems}{GPA: 9.87/10}
-      \resumeItemListStart
-        \vspace{0.2em}
-        \textit{Thesis: \textit{Solar Magnetic Tornado Detection Using Neural Networks}}
-      \resumeItemListEnd
-      \vspace{-0.8em}
-    \resumeSubheading
-      {Higher School of Economics (HSE University)}{Sep 2019 -- Jun 2023}
-      {Bachelor's degree in Economics}{GPA: 8.78/10}
 
   \resumeSubHeadingListEnd
 
@@ -140,6 +159,24 @@
         \textbf{Backend \& DevOps Tools:}{ Nginx, Redis, Prometheus, Grafana, Telegraf, Docker, RPM, Bash, Linux, WireMock, Ansible, GitLab CI } \\ \vspace*{3pt}
         \textbf{Languages:}{ English (C1), Russian (Native) } \\
     }}
+  \resumeSubHeadingListEnd
+
+% ===== EDUCATION =====
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Higher School of Economics (HSE University), Faculty of Computer Science}{Sep 2023 -- Jun 2025}
+      {Master's degree in Machine Learning and High Load Systems}{GPA: 9.87/10}
+      \resumeItemListStart
+        \vspace{0.2em}
+        \textit{Thesis: \textit{Solar Magnetic Tornado Detection Using Neural Networks}}
+      \resumeItemListEnd
+      \vspace{-0.8em}
+    \resumeSubheading
+      {Higher School of Economics (HSE University)}{Sep 2019 -- Jun 2023}
+      {Bachelor's degree in Economics}{GPA: 8.78/10}
+
   \resumeSubHeadingListEnd
 
 \end{document}
